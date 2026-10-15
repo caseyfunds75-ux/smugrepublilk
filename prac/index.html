@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore sample vehicle listings from Smug Republik Auto Sales in Port Harcourt, Rivers State. Contact the team to ask about vehicles and availability.">
+  <meta name="theme-color" content="#171817">
+  <title>Smug Republik Auto Sales | Find Your Next Car With Confidence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://commons.wikimedia.org">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Smug Republik Auto Sales home"><span class="brand-mark" aria-hidden="true">SR<span>.</span></span><span class="brand-name">SMUG REPUBLIK<small>AUTO SALES</small></span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span></button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+        <a href="#top">Home</a><a href="#inventory">Available cars</a><a href="#about">About us</a><a href="#contact">Contact</a>
+        <a class="button button-dark nav-cta" href="#inventory">Browse cars <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-image" src="https://commons.wikimedia.org/wiki/Special:FilePath/2018_Toyota_Camry_%28ASV70R%29_Ascent_sedan_%282018-08-27%29_01.jpg?width=1800" alt="2018 Toyota Camry sedan, shown as a sample vehicle" fetchpriority="high">
+      <div class="hero-shade"></div>
+      <div class="hero-content page-width">
+        <p class="eyebrow hero-eyebrow"><span></span> PORT HARCOURT · RIVERS STATE</p>
+        <h1 id="hero-title">Find your next car<br>with <em>confidence.</em></h1>
+        <p class="hero-copy">Explore available vehicles and get in touch with our team to find the right car for you.</p>
+        <div class="hero-actions">
+          <a class="button button-red" href="#inventory">Explore available cars <span aria-hidden="true">↗</span></a>
+          <a class="button button-glass whatsapp-link" data-message="Hello Smug Republik Auto Sales, I'd like to ask about your vehicles. Please share current availability and more details." href="#contact">Chat with us on WhatsApp <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="hero-note">A local team. A more considered way to buy.</p>
+      </div>
+      <div class="hero-index" aria-hidden="true"><span>01</span><i></i> 06</div>
+      <a class="hero-scroll" href="#inventory"><span></span> SCROLL TO EXPLORE</a>
+    </section>
+
+    <section class="intro-strip" aria-label="Dealership location"><div class="page-width intro-strip-inner"><span class="strip-label">YOUR NEXT JOURNEY STARTS HERE</span><span class="strip-place"><span class="pin" aria-hidden="true">+</span> Port Harcourt, Nigeria</span><span class="strip-sample">DEMO INVENTORY · SAMPLE ONLY</span></div></section>
+
+    <section class="inventory-section section-space" id="inventory" aria-labelledby="inventory-title">
+      <div class="page-width">
+        <div class="section-heading inventory-heading"><div><p class="eyebrow"><span></span> THE COLLECTION</p><h2 id="inventory-title">Find the one<br>that <em>fits.</em></h2></div><div class="inventory-intro"><p>Browse our sample selection of considered sedans and SUVs. Ask our team for current details and availability.</p><span class="inventory-count"><b id="result-count">06</b> SAMPLE VEHICLES</span></div></div>
+        <div class="sample-notice" role="note"><span class="notice-icon" aria-hidden="true">i</span><p><strong>Demonstration inventory.</strong> Vehicles and prices shown are sample data for this website concept. They are not confirmed stock or current offers. Please confirm all vehicle details, availability and pricing with the dealership.</p></div>
+        <form class="filter-bar" id="vehicle-filters" role="search" aria-label="Search sample vehicles">
+          <label class="search-field"><span class="field-icon" aria-hidden="true">⌕</span><span class="visually-hidden">Search make or model</span><input id="search-input" type="search" placeholder="Search make or model" autocomplete="off"></label>
+          <label class="select-field"><span class="visually-hidden">Vehicle type</span><select id="type-filter"><option value="">All vehicle types</option><option value="Sedan">Sedan</option><option value="SUV">SUV</option></select></label>
+          <label class="select-field"><span class="visually-hidden">Maximum price</span><select id="price-filter"><option value="">Any sample price</option><option value="30000000">Up to ₦30m</option><option value="40000000">Up to ₦40m</option><option value="55000000">Up to ₦55m</option><option value="70000000">Up to ₦70m</option></select></label>
+          <label class="select-field"><span class="visually-hidden">Transmission</span><select id="transmission-filter"><option value="">Any transmission</option><option value="Automatic">Automatic</option><option value="Manual">Manual</option></select></label>
+          <button class="reset-button" id="reset-filters" type="reset">Reset <span aria-hidden="true">↺</span></button>
+        </form>
+        <div class="vehicle-grid" id="vehicle-grid" aria-live="polite"></div>
+        <div class="empty-state" id="empty-state" hidden><span aria-hidden="true">⌕</span><h3>No matching vehicles</h3><p>Try changing your search or filters to see more sample vehicles.</p><button class="button button-dark" id="empty-reset" type="button">Clear filters</button></div>
+        <p class="inventory-footnote">Sample prices are illustrative only and may not reflect current market pricing.</p>
+      </div>
+    </section>
+
+    <section class="confidence-section section-space" aria-labelledby="confidence-title"><div class="page-width confidence-layout">
+      <div class="confidence-title"><p class="eyebrow eyebrow-light"><span></span> A BETTER WAY TO SEARCH</p><h2 id="confidence-title">Clear choices.<br><em>Helpful people.</em></h2><p>Finding a car is a big decision. Our team is here to make your next step feel straightforward.</p><a class="text-link whatsapp-link" data-message="Hello Smug Republik Auto Sales, I'm looking for help finding a suitable vehicle. Could your team assist me?" href="#contact">Speak with our team <span aria-hidden="true">↗</span></a></div>
+      <div class="confidence-points">
+        <article class="confidence-point"><span class="point-number">01</span><div><h3>Customer-focused service</h3><p>Start with what matters to you. Our team can help guide your search around your needs.</p></div><span class="point-symbol" aria-hidden="true">↗</span></article>
+        <article class="confidence-point"><span class="point-number">02</span><div><h3>Clear vehicle information</h3><p>Ask questions about a vehicle's details, pricing and availability before you decide.</p></div><span class="point-symbol" aria-hidden="true">↗</span></article>
+        <article class="confidence-point"><span class="point-number">03</span><div><h3>Help finding the right fit</h3><p>Tell us what you are looking for and get assistance exploring suitable options.</p></div><span class="point-symbol" aria-hidden="true">↗</span></article>
+        <article class="confidence-point"><span class="point-number">04</span><div><h3>Convenient WhatsApp enquiries</h3><p>Continue the conversation in a way that works for you, right from your phone.</p></div><span class="point-symbol" aria-hidden="true">↗</span></article>
+      </div>
+    </div></section>
+
+    <section class="about-section section-space" id="about" aria-labelledby="about-title"><div class="page-width about-layout">
+      <div class="about-image-wrap"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/2021_Toyota_Highlander_XLE_AWD%2C_front_12.12.20.jpg?width=1100" alt="2021 Toyota Highlander SUV, shown as a sample vehicle" loading="lazy"><span class="image-caption">SAMPLE VEHICLE PHOTOGRAPH</span><span class="about-stamp" aria-hidden="true">SR<span>.</span><small>PORT HARCOURT</small></span></div>
+      <div class="about-copy"><p class="eyebrow"><span></span> ABOUT THE DEALERSHIP</p><h2 id="about-title">Rooted in<br><em>Port Harcourt.</em></h2><p>Smug Republik Auto Sales is a car sales and automobile dealership based in Port Harcourt, Rivers State, Nigeria.</p><p>For verified details about the dealership, its team and services, please get in touch directly. We are keeping this introduction simple until more business information is confirmed.</p><a class="text-link text-link-dark" href="#contact">Get in touch <span aria-hidden="true">↗</span></a></div>
+    </div></section>
+
+    <section class="contact-section section-space" id="contact" aria-labelledby="contact-title"><div class="page-width contact-layout">
+      <div class="contact-copy"><p class="eyebrow eyebrow-light"><span></span> START A CONVERSATION</p><h2 id="contact-title">Good cars.<br><em>Good conversations.</em></h2><p>Ask us about a sample vehicle, share what you are looking for, or reach out to learn more about the dealership.</p>
+        <div class="contact-details"><div><span>VISIT</span><p>Smug Republik Auto Sales<br>Port Harcourt, Rivers State, Nigeria</p></div><div><span>CALL</span><p>Telephone details to be confirmed</p></div><div><span>WHATSAPP</span><p id="whatsapp-contact-label">Number to be configured</p></div></div>
+        <div class="contact-actions"><a class="button button-red whatsapp-link" data-message="Hello Smug Republik Auto Sales, I'd like to make an enquiry. Please get in touch with me." href="#contact">Chat on WhatsApp <span aria-hidden="true">↗</span></a><a class="button button-outline-light" id="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Port+Harcourt%2C+Rivers+State%2C+Nigeria" target="_blank" rel="noopener">Open Google Maps <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <form class="enquiry-form" id="enquiry-form"><div class="form-heading"><span>01 / ENQUIRY</span><h3>How can we help?</h3></div><label for="name">Your name</label><input id="name" name="name" type="text" placeholder="Full name" autocomplete="name" required minlength="2"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" placeholder="e.g. 0801 234 5678" autocomplete="tel" required minlength="7" maxlength="20" title="Enter a valid phone number using digits, spaces, +, parentheses or hyphens."><label for="message">Your message</label><textarea id="message" name="message" rows="4" placeholder="Tell us what you are looking for" required minlength="10"></textarea><button class="button button-red form-submit" type="submit">Prepare enquiry <span aria-hidden="true">↗</span></button><p class="form-note" id="form-status" role="status">This sample form does not send or store information. Submitting will prepare a message for you to copy.</p></form>
+    </div></section>
+  </main>
+
+  <footer class="site-footer"><div class="page-width footer-main"><a class="brand footer-brand" href="#top" aria-label="Smug Republik Auto Sales home"><span class="brand-mark" aria-hidden="true">SR<span>.</span></span><span class="brand-name">SMUG REPUBLIK<small>AUTO SALES</small></span></a><p>Thoughtful car buying starts with a conversation.</p><nav class="footer-nav" aria-label="Footer navigation"><a href="#inventory">Available cars</a><a href="#about">About us</a><a href="#contact">Contact</a></nav><a class="footer-top" href="#top" aria-label="Back to top">↑</a></div><div class="page-width footer-bottom"><span>© <span id="current-year"></span> Smug Republik Auto Sales</span><span>Port Harcourt, Rivers State, Nigeria</span><span>Website by <a href="#top">MaxWeb</a></span></div></footer>
+
+  <dialog class="vehicle-dialog" id="vehicle-dialog" aria-labelledby="dialog-title"><button class="dialog-close" type="button" aria-label="Close vehicle details">×</button><div class="dialog-content" id="dialog-content"></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
